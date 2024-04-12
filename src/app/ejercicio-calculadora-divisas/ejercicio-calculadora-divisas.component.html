@@ -1,0 +1,21 @@
+<h2>Calculadora de Divisas</h2>
+Cantidad:
+<input type="number" id="cantidad" [(ngModel)]="cantidad" ><br>
+
+<label for="monedaOrigen">De:</label>
+<select id="monedaOrigen" [(ngModel)]="monedaOrigen">
+  <option value="EUR">Euros</option>
+  <option value="USD">Dólares</option>
+  <option value="GBP">Libras</option>
+</select>
+
+A:
+<select id="monedaDestino" [(ngModel)]="monedaDestino">
+  <option value="EUR">Euros</option>
+  <option value="USD">Dólares</option>
+  <option value="GBP">Libras</option>
+</select>
+<br>
+<button (click)="convertirDivisas()">Convertir</button>
+
+Resultado: {{resultado}}
